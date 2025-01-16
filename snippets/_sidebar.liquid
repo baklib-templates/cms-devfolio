@@ -1,0 +1,9 @@
+{% assign pages = site.pages['/'].children_in_list %}
+
+<h1 class="font-bold text-lg border-b">{{ 'generic.recent_news' | t }}</h1>
+
+<ul class="list-disc list-inside">
+  {% for item in pages %}
+    <li class=""><a href="{{ item.path }}">{{ item.link_text }}</a></li>
+  {% endfor %}
+</ul>
